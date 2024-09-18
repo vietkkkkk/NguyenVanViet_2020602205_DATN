@@ -1,0 +1,74 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/Layout.cshtml";
+}
+@using webbanhang.Models;
+@using X.PagedList.Mvc.Core;
+@model X.PagedList.IPagedList<ItemCategory>
+@functions{
+    public MyDBContext db = new MyDBContext();
+    public List<ItemCategory> sub_Categories(int _CategoryId){
+        List<ItemCategory> list_sub_cat = db.Categories.Where(x => x.ParentId == _CategoryId).ToList();
+        return list_sub_cat;
+    }
+}
+<div class="col-md-12">
+    <div style="margin-bottom:5px;">
+        <a href="/Admin/Categories/Create" class="btn btn-primary">Add Categories</a>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">List Admin</div>
+        <div class="panel-body">
+            <table class="table table-bordered table-hover">
+                <tr>
+                    <th>Name</th>
+                    <th>DisplayHomePage</th>
+                    <th style="width:100px;"></th>
+                </tr>
+                @foreach (var row in Model)
+                {
+                    <tr>
+                        <td>
+                            @row.Name
+                        </td>
+                        <td>
+                            @if(row.DisplayHomePage == 1){
+                                <span>x</span>
+                            }
+                        </td>
+                        <td>
+                            <a href="/Admin/Categories/Update/@row.Id">Edit</a>
+                            <a href="/Admin/Categories/Delete/@row.Id" onclick="return window.confirm('Are you sure to delete ?');">Delete</a>
+                        </td>
+                    </tr>
+                    var list_subCategory = sub_Categories(row.Id);
+                    @foreach (var sub_row in list_subCategory)
+                    {
+                        <tr>
+                            <td style="padding-left : 50px">
+                                @sub_row.Name
+                            </td>
+                            <td>
+                                @if (sub_row.DisplayHomePage == 1)
+                                {
+                                    <span>x</span>
+                                }
+                            </td>
+                            <td>
+                                <a href="/Admin/Categories/Update/@sub_row.Id">Edit</a>
+                                <a href="/Admin/Categories/Delete/@sub_row.Id" onclick="return window.confirm('Are you sure to delete ?');">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                    }
+
+            </table>
+            <style type="text/css">
+                .pagination {
+                    padding: 0px;
+                    margin: 0px;
+                }
+            </style>
+            @Html.PagedListPager(Model, page => Url.Action("Read", new { page = page, a = 1, b = 2 }))
+        </div>
+    </div>
+</div>

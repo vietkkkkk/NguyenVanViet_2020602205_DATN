@@ -1,0 +1,913 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Admin\\css\\AdminLTE.min.css",
+      "PackagePath": "staticwebassets\\Admin\\css\\AdminLTE.min.css"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Admin\\css\\StyleSheet.css",
+      "PackagePath": "staticwebassets\\Admin\\css\\StyleSheet.css"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Admin\\css\\_all-skins.min.css",
+      "PackagePath": "staticwebassets\\Admin\\css\\_all-skins.min.css"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Admin\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\Admin\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Admin\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\Admin\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Admin\\css\\login.css",
+      "PackagePath": "staticwebassets\\Admin\\css\\login.css"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Admin\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Admin\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Admin\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Admin\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Admin\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Admin\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\Admin\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Admin\\images\\Logo.png",
+      "PackagePath": "staticwebassets\\Admin\\images\\Logo.png"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Admin\\images\\about2.jpg",
+      "PackagePath": "staticwebassets\\Admin\\images\\about2.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Admin\\images\\anh1.jpg",
+      "PackagePath": "staticwebassets\\Admin\\images\\anh1.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Admin\\images\\logo.jpg",
+      "PackagePath": "staticwebassets\\Admin\\images\\logo.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Admin\\images\\sidebar_img.jpg",
+      "PackagePath": "staticwebassets\\Admin\\images\\sidebar_img.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Admin\\images\\user2-160x160.jpg",
+      "PackagePath": "staticwebassets\\Admin\\images\\user2-160x160.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Admin\\js\\adminlte.min.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\adminlte.min.js"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Admin\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Admin\\js\\jquery-ui.min.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\jquery-ui.min.js"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Admin\\js\\jquery.min.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\jquery.min.js"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\404.html",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\404.html"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\about-2.html",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\about-2.html"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\about.html",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\about.html"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\css\\bundle.css",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\css\\bundle.css"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\css\\plugin.css",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\css\\plugin.css"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\css\\responsive.css",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\css\\responsive.css"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\css\\style.css",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\css\\style.css"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\fonts\\MyriadPro-Bold-1.bin",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\fonts\\MyriadPro-Bold-1.bin"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\fonts\\MyriadPro-Bold-2.bin",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\fonts\\MyriadPro-Bold-2.bin"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\fonts\\MyriadPro-Bold-3.bin",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\fonts\\MyriadPro-Bold-3.bin"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\fonts\\MyriadPro-Bold.bin",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\fonts\\MyriadPro-Bold.bin"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\fonts\\MyriadPro-Bold.svg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\fonts\\MyriadPro-Bold.svg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\fonts\\MyriadPro-Bold.ttf",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\fonts\\MyriadPro-Bold.ttf"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\fonts\\MyriadPro-Regular-1.bin",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\fonts\\MyriadPro-Regular-1.bin"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\fonts\\MyriadPro-Regular-2.bin",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\fonts\\MyriadPro-Regular-2.bin"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\fonts\\MyriadPro-Regular-3.bin",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\fonts\\MyriadPro-Regular-3.bin"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\fonts\\MyriadPro-Regular.bin",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\fonts\\MyriadPro-Regular.bin"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\fonts\\MyriadPro-Regular.svg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\fonts\\MyriadPro-Regular.svg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\fonts\\MyriadPro-Regular.ttf",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\fonts\\MyriadPro-Regular.ttf"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\fonts\\fontawesome-webfont-1.bin",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\fonts\\fontawesome-webfont-1.bin"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\fonts\\fontawesome-webfont-2.bin",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\fonts\\fontawesome-webfont-2.bin"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\fonts\\fontawesome-webfont-3.bin",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\fonts\\fontawesome-webfont-3.bin"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\fonts\\fontawesome-webfont.bin",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\fonts\\fontawesome-webfont.bin"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\banner\\background.png",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\banner\\background.png"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\banner\\banner1.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\banner\\banner1.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\banner\\banner11.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\banner\\banner11.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\banner\\banner2.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\banner\\banner2.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\banner\\banner3.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\banner\\banner3.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\banner\\banner5.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\banner\\banner5.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\banner\\banner6.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\banner\\banner6.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\banner\\banner7.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\banner\\banner7.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\banner\\banner8.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\banner\\banner8.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\banner\\banner9.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\banner\\banner9.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\banner\\bannner10.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\banner\\bannner10.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\blog\\blog1.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\blog\\blog1.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\blog\\blog10.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\blog\\blog10.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\blog\\blog11.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\blog\\blog11.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\blog\\blog12.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\blog\\blog12.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\blog\\blog13.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\blog\\blog13.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\blog\\blog14.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\blog\\blog14.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\blog\\blog2.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\blog\\blog2.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\blog\\blog3.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\blog\\blog3.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\blog\\blog4.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\blog\\blog4.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\blog\\blog5.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\blog\\blog5.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\blog\\blog6.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\blog\\blog6.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\blog\\blog7.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\blog\\blog7.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\blog\\blog8.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\blog\\blog8.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\blog\\blog9.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\blog\\blog9.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\blog\\tweets.jpeg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\blog\\tweets.jpeg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\brand\\brand1.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\brand\\brand1.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\brand\\brand2.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\brand\\brand2.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\brand\\brand3.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\brand\\brand3.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\brand\\brand4.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\brand\\brand4.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\brand\\brand5.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\brand\\brand5.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\brand\\brand6.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\brand\\brand6.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\cart\\cart.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\cart\\cart.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\cart\\cart17.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\cart\\cart17.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\cart\\cart18.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\cart\\cart18.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\cart\\cart19.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\cart\\cart19.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\cart\\cart2.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\cart\\cart2.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\cart\\cart3.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\cart\\cart3.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\cart\\cart4.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\cart\\cart4.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\cart\\cart5.png",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\cart\\cart5.png"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\cart\\count.png",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\cart\\count.png"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\cart\\count2.png",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\cart\\count2.png"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\cart\\count3.png",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\cart\\count3.png"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\cart\\span-hot.png",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\cart\\span-hot.png"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\cart\\span-new.png",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\cart\\span-new.png"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\favicon.png",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\favicon.png"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\logo\\fontlogo.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\logo\\fontlogo.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\logo\\fontlogo2.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\logo\\fontlogo2.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\logo\\logo.jpg.png",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\logo\\logo.jpg.png"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\portfolio\\port1.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\portfolio\\port1.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\portfolio\\port10.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\portfolio\\port10.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\portfolio\\port11.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\portfolio\\port11.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\portfolio\\port12.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\portfolio\\port12.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\portfolio\\port2.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\portfolio\\port2.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\portfolio\\port3.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\portfolio\\port3.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\portfolio\\port4.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\portfolio\\port4.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\portfolio\\port5.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\portfolio\\port5.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\portfolio\\port6.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\portfolio\\port6.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\portfolio\\port7.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\portfolio\\port7.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\portfolio\\port8.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\portfolio\\port8.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\portfolio\\port9.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\portfolio\\port9.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\product\\product1.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\product\\product1.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\product\\product13.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\product\\product13.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\product\\product14.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\product\\product14.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\product\\product15.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\product\\product15.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\product\\product2.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\product\\product2.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\product\\product3.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\product\\product3.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\product\\product4.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\product\\product4.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\product\\product5.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\product\\product5.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\product\\product6.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\product\\product6.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\product\\product7.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\product\\product7.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\product\\product8.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\product\\product8.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\product\\product9.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\product\\product9.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\product\\productbig.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\product\\productbig.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\product\\productbig1.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\product\\productbig1.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\product\\productbig2.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\product\\productbig2.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\services\\service1.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\services\\service1.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\services\\service2.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\services\\service2.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\services\\service3.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\services\\service3.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\services\\service4.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\services\\service4.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\ship\\about1.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\ship\\about1.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\ship\\about3.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\ship\\about3.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\ship\\about4.jpg",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\ship\\about4.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\ship\\nav-left-teal.png",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\ship\\nav-left-teal.png"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\ship\\nav-right-teal.png",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\ship\\nav-right-teal.png"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\slider\\133573800280841994_slide_1.png",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\slider\\133573800280841994_slide_1.png"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\slider\\133573800371541497_slider_2.png",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\slider\\133573800371541497_slider_2.png"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\slider\\133573800464446843_slider_3.png",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\slider\\133573800464446843_slider_3.png"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\slider\\slide_4.png",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\slider\\slide_4.png"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\img\\visha\\papyel.png",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\img\\visha\\papyel.png"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\js\\ajax-mail.js",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\js\\ajax-mail.js"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\js\\main.js",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\js\\main.js"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\js\\plugins.js",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\js\\plugins.js"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\js\\popper.js",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\js\\popper.js"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\js\\vendor\\jquery-1.12.0.min.js",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\js\\vendor\\jquery-1.12.0.min.js"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\assets\\js\\vendor\\modernizr-2.8.3.min.js",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\assets\\js\\vendor\\modernizr-2.8.3.min.js"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\blog-details.html",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\blog-details.html"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\blog-fullwidth.html",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\blog-fullwidth.html"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\blog-sidebar.html",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\blog-sidebar.html"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\blog.html",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\blog.html"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\cart.html",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\cart.html"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\checkout.html",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\checkout.html"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\contact.html",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\contact.html"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\faq.html",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\faq.html"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\index-2.html",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\index-2.html"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\index.html",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\index.html"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\login.html",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\login.html"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\my-account.html",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\my-account.html"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\portfolio-details.html",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\portfolio-details.html"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\portfolio.html",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\portfolio.html"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\services.html",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\services.html"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\shop-fullwidth-list.html",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\shop-fullwidth-list.html"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\shop-fullwidth.html",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\shop-fullwidth.html"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\shop-list.html",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\shop-list.html"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\shop-sidebar-list.html",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\shop-sidebar-list.html"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\shop-sidebar.html",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\shop-sidebar.html"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\shop.html",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\shop.html"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\single-product-gallery.html",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\single-product-gallery.html"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\single-product-sidebar.html",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\single-product-sidebar.html"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\single-product-video.html",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\single-product-video.html"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\single-product.html",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\single-product.html"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Frontend\\frontend\\wishlist.html",
+      "PackagePath": "staticwebassets\\Frontend\\frontend\\wishlist.html"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\Adv\\133601292994667842_banner5.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Adv\\133601292994667842_banner5.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\Adv\\133601293068391428_banner6.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Adv\\133601293068391428_banner6.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\Adv\\133601293165041918_banner7.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Adv\\133601293165041918_banner7.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\Adv\\133601293261505486_banner9.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Adv\\133601293261505486_banner9.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\Adv\\133601293328048851_banner7.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Adv\\133601293328048851_banner7.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\News\\133594374512384706_blog10.jpg",
+      "PackagePath": "staticwebassets\\Upload\\News\\133594374512384706_blog10.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\News\\133594374643475929_blog6.jpg",
+      "PackagePath": "staticwebassets\\Upload\\News\\133594374643475929_blog6.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\News\\133594374738177938_blog9.jpg",
+      "PackagePath": "staticwebassets\\Upload\\News\\133594374738177938_blog9.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\News\\133594374840680255_blog13.jpg",
+      "PackagePath": "staticwebassets\\Upload\\News\\133594374840680255_blog13.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\News\\133594377703916806_blog1.jpg",
+      "PackagePath": "staticwebassets\\Upload\\News\\133594377703916806_blog1.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\News\\133594378163051454_blog14.jpg",
+      "PackagePath": "staticwebassets\\Upload\\News\\133594378163051454_blog14.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\News\\133600860420639090_productbig1.jpg",
+      "PackagePath": "staticwebassets\\Upload\\News\\133600860420639090_productbig1.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\News\\133600860493492329_product7.jpg",
+      "PackagePath": "staticwebassets\\Upload\\News\\133600860493492329_product7.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\News\\133600860570739598_product7.jpg",
+      "PackagePath": "staticwebassets\\Upload\\News\\133600860570739598_product7.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\News\\133600860638295670_productbig1.jpg",
+      "PackagePath": "staticwebassets\\Upload\\News\\133600860638295670_productbig1.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\News\\133600862270664152_productbig1.jpg",
+      "PackagePath": "staticwebassets\\Upload\\News\\133600862270664152_productbig1.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\News\\133702707131261212_productbig.jpg",
+      "PackagePath": "staticwebassets\\Upload\\News\\133702707131261212_productbig.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\News\\133702710621803944_productbig2.jpg",
+      "PackagePath": "staticwebassets\\Upload\\News\\133702710621803944_productbig2.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\News\\133710661328375566_il_300x300.6245251916_l32q.png",
+      "PackagePath": "staticwebassets\\Upload\\News\\133710661328375566_il_300x300.6245251916_l32q.png"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\News\\133710661780326360_133571048112066035_product2.jpg",
+      "PackagePath": "staticwebassets\\Upload\\News\\133710661780326360_133571048112066035_product2.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\News\\133710662477258292_il_300x300.6245251916_l32q.png",
+      "PackagePath": "staticwebassets\\Upload\\News\\133710662477258292_il_300x300.6245251916_l32q.png"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\News\\133710662651083295_il_794xN.5567736175_lfow.png",
+      "PackagePath": "staticwebassets\\Upload\\News\\133710662651083295_il_794xN.5567736175_lfow.png"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\News\\133710662814956181_il_794xN.5805692460_4xwy.png",
+      "PackagePath": "staticwebassets\\Upload\\News\\133710662814956181_il_794xN.5805692460_4xwy.png"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\News\\133710662986496397_il_794xN.6000854882_evs7.png",
+      "PackagePath": "staticwebassets\\Upload\\News\\133710662986496397_il_794xN.6000854882_evs7.png"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\Products\\133571047958957215_product1.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Products\\133571047958957215_product1.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\Products\\133571048112066035_product2.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Products\\133571048112066035_product2.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\Products\\133571048223875071_product3.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Products\\133571048223875071_product3.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\Products\\133571048315078889_product4.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Products\\133571048315078889_product4.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\Products\\133571048467640916_product5.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Products\\133571048467640916_product5.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\Products\\133571048610328215_product6.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Products\\133571048610328215_product6.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\Products\\133571048885395939_product6.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Products\\133571048885395939_product6.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\Products\\133571048998982722_product7.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Products\\133571048998982722_product7.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\Products\\133571049140245115_product8.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Products\\133571049140245115_product8.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\Products\\133571049284596545_product13.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Products\\133571049284596545_product13.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\Products\\133571049399602222_product14.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Products\\133571049399602222_product14.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\Products\\133571049542587259_product15.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Products\\133571049542587259_product15.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\Products\\133571049685090190_productbig2.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Products\\133571049685090190_productbig2.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\Products\\133595248185206807_a1.png",
+      "PackagePath": "staticwebassets\\Upload\\Products\\133595248185206807_a1.png"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\Products\\133600837007902072_a1.png",
+      "PackagePath": "staticwebassets\\Upload\\Products\\133600837007902072_a1.png"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\Products\\133708878636998101_133571047958957215_product1.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Products\\133708878636998101_133571047958957215_product1.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\Products\\133708880042118712_133571048112066035_product2.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Products\\133708880042118712_133571048112066035_product2.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\Products\\133708880708419690_133571048223875071_product3.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Products\\133708880708419690_133571048223875071_product3.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\Products\\133708881363221109_133571048315078889_product4.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Products\\133708881363221109_133571048315078889_product4.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\Products\\133708881867448522_133571048467640916_product5.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Products\\133708881867448522_133571048467640916_product5.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\Products\\133708882327731390_133571048610328215_product6.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Products\\133708882327731390_133571048610328215_product6.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\Products\\133708883025435590_133571048998982722_product7.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Products\\133708883025435590_133571048998982722_product7.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\Products\\133708883457598080_133571049140245115_product8.jpg",
+      "PackagePath": "staticwebassets\\Upload\\Products\\133708883457598080_133571049140245115_product8.jpg"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\Products\\133710659025878383_il_300x300.6245251916_l32q.png",
+      "PackagePath": "staticwebassets\\Upload\\Products\\133710659025878383_il_300x300.6245251916_l32q.png"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\Products\\133710659358987743_il_794xN.5567736175_lfow.png",
+      "PackagePath": "staticwebassets\\Upload\\Products\\133710659358987743_il_794xN.5567736175_lfow.png"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\Slides\\133573800280841994_slide_1.png",
+      "PackagePath": "staticwebassets\\Upload\\Slides\\133573800280841994_slide_1.png"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\Slides\\133573800371541497_slider_2.png",
+      "PackagePath": "staticwebassets\\Upload\\Slides\\133573800371541497_slider_2.png"
+    },
+    {
+      "Id": "E:\\MyWebsite\\webbanhang\\wwwroot\\Upload\\Slides\\133573800464446843_slider_3.png",
+      "PackagePath": "staticwebassets\\Upload\\Slides\\133573800464446843_slider_3.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.webbanhang.props",
+      "PackagePath": "build\\webbanhang.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.webbanhang.props",
+      "PackagePath": "buildMultiTargeting\\webbanhang.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.webbanhang.props",
+      "PackagePath": "buildTransitive\\webbanhang.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.webbanhang.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,113 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/Layout.cshtml";
+}
+@using webbanhang.Models;
+@using X.PagedList.Mvc.Core;
+@model X.PagedList.IPagedList<ItemProduct>
+@functions {
+    public MyDBContext db = new MyDBContext();
+    public List<ItemCategory> GetCategories(int ProductId)
+    {
+        var list_category = (from product in db.Products
+                             join
+            category_product in db.CategoriesProducts on product.Id equals category_product.ProductId
+                             join category in db.Categories on category_product.CategoryId
+                             equals category.Id
+                             where product.Id == ProductId
+                             select category).ToList();
+        return list_category;
+    }
+    public List<ItemTag> GetTags(int TagId)
+    {
+        var list_tag = from product in db.Products join tag_product in db.TagsProducts on product.Id equals tag_product.ProductId join tag in db.Tags on tag_product.TagId equals tag.Id where product.Id == TagId select tag;
+        return list_tag.ToList();
+    }
+}
+<div class="col-md-12">
+    <div style="margin-bottom:5px;">
+        <a href="/Admin/Products/Create" class="btn btn-primary">Add</a>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">List Products</div>
+        <div class="panel-body">
+            <table class="table table-bordered table-hover">
+                <tr>
+                    <th style="width : 100px ">Image</th>
+                    <th>Name</th>
+                    <th style="width : 200px ">Category</th>
+                    <th style="width : 200px ">Tag</th>
+                    <th style="width : 10px ">Price</th>
+                    <th style="width : 80px ">Hot</th>
+                    <th style="width : 80px "></th>
+                </tr>
+                @foreach (var row in Model)
+                {
+                    <tr>
+                        <td>
+                            @if (row.Photo != "")
+                            {
+                                <img src="~/Upload/Products/@row.Photo" style="width:100px" />
+                            }
+                        </td>
+                        <td>
+                            @row.Name
+                        </td>
+                        <td>
+                            @{
+                                var list_categories = GetCategories(row.Id);
+
+
+                            }
+                            @foreach (var item in list_categories)
+                            {
+                                <div>@item.Name</div>
+                            }
+
+                        </td>
+                        <td>
+                            @{
+                                var list_tag = GetTags(row.Id);
+
+
+                            }
+                            @foreach (var item in list_tag)
+                            {
+                                <div>@item.Name</div>
+                            }
+
+                        </td>
+                        <td>@row.Price</td>
+                        <td style="text-align: center">
+                            @if (row.Hot == 1)
+                            {
+                                <span>Hot</span>
+                            }
+                        </td>
+                        <td>
+                            <a href="/Admin/Products/Update/@row.Id">Edit</a>
+                            <a href="/Admin/Products/Delete/@row.Id" onclick="return window.confirm('Are you sure?');">Delete</a>
+                        </td>
+                    </tr>
+                }
+                @*  <tr>
+                <td>list fullname</td>
+                <td>list email</td>
+                <td style="text-align:center;">
+                <a href="#">Edit</a>&nbsp;
+                <a href="#" onclick="return window.confirm('Are you sure?');">Delete</a>
+                </td>
+                </tr> *@
+            </table>
+            <style type="text/css">
+                .pagination {
+                    padding: 0px;
+                    margin: 0px;
+                }
+            </style>
+            @*phan trang bang tay*@
+            @*So trang: @Model.PageCount /
+            Trang hien tai: @Model.PageNumber*@
+            @Html.PagedListPager(Model, page => Url.Action("Read", new { page = page, a = 1, b = 2 }))
+        </div>
+    </div>
+</div>

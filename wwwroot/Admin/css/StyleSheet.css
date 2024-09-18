@@ -1,0 +1,24 @@
+﻿.main-sidebar {
+    background: #ffffff url("/Admin/images/sidebar_img.jpg") no-repeat right top;
+}
+
+.skin-blue .main-header .navbar, .skin-blue .main-header .logo {
+    background-color: #00bba6 !important;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.sidebar-menu > li a {
+    color: #fff !important;
+}
+
+
+.skin-blue .sidebar-menu > li:hover > a, .skin-blue .sidebar-menu > li.active > a, .skin-blue .sidebar-menu > li.menu-open > a {
+    background: rgba(0, 187, 166, 0.5) !important;
+}
+
+.logo {
+    display: inline-block !important;
+    height: 55.71px !important;
+}

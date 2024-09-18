@@ -1,0 +1,46 @@
+﻿@{
+    Layout = "~/Areas/Admin/Views/Shared/Layout.cshtml";
+}
+@using webbanhang.Models;
+@using X.PagedList.Mvc.Core;
+@model X.PagedList.IPagedList<ItemAdmin>
+
+<div class="col-md-12">
+    <div style="margin-bottom:5px;">
+        <a href="/Admin/Admins/Create" class="btn btn-primary">Add admin</a>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">List Admin</div>
+        <div class="panel-body">
+            <table class="table table-bordered table-hover">
+                <tr>
+                    <th>Fullname</th>
+                    <th>Email</th>
+                    <th style="width:100px;"></th>
+                </tr>
+                @foreach (var row in Model)
+                {
+                    <tr>
+                        <td>
+                            @row.Name
+                        </td>
+                        <td>
+                            @row.Email
+                        </td>
+                        <td>
+                            <a href="/Admin/Admins/Update/@row.Id">Edit</a>
+                            <a href="/Admin/Admins/Delete/@row.Id" onclick="return window.confirm('Are you sure to delete ?');">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </table>
+            <style type="text/css">
+                .pagination {
+                    padding: 0px;
+                    margin: 0px;
+                }
+            </style>
+            @Html.PagedListPager(Model, page => Url.Action("Read", new { page = page, a = 1, b = 2 }))
+        </div>
+    </div>
+</div>

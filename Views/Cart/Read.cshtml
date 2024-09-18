@@ -1,0 +1,239 @@
+﻿
+@using webbanhang.Models
+
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Coron-cart</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="~/Frontend/frontend/assets\img\favicon.png">
+
+    <!-- all css here -->
+    <link rel="stylesheet" href="~/Frontend/frontend/assets\css\bootstrap.min.css">
+    <link rel="stylesheet" href="~/Frontend/frontend/assets\css\plugin.css">
+    <link rel="stylesheet" href="~/Frontend/frontend/assets\css\bundle.css">
+    <link rel="stylesheet" href="~/Frontend/frontend/assets\css\style.css">
+    <link rel="stylesheet" href="~/Frontend/frontend/assets\css\responsive.css">
+    <script src="~/Frontend/frontend/assets\js\vendor\modernizr-2.8.3.min.js"></script>
+</head>
+
+
+
+<body>
+    <!-- Add your site or application content here -->
+    <!--pos page start-->
+    <div class="pos_page">
+        <div class="container">
+            <!--pos page inner-->
+            <div class="pos_page_inner">
+                <!--header area -->
+                @Html.Partial("~/Views/Shared/Header.cshtml")
+                <!--header end -->
+                <!--breadcrumbs area start-->
+                <div class="breadcrumbs_area">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="breadcrumb_content">
+                                <ul>
+                                    <li><a href="/Home/Index">home</a></li>
+                                    <li><i class="fa fa-angle-right"></i></li>
+                                    <li>Shopping Cart</li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--breadcrumbs area end-->
+                @if(Model.Count > 0){
+                <!--shopping cart area start -->
+                <div class="shopping_cart_area">
+                        <form method="post" id="frm" action="/Cart/Update">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="table_desc">
+                                    <div class="cart_page table-responsive">
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th class="product_remove">Delete</th>
+                                                    <th class="product_thumb">Image</th>
+                                                    <th class="product_name">Product</th>
+                                                    <th class="product-price">Price</th>
+                                                    <th class="product-price">Discount</th>
+                                                    <th class="product_quantity">Quantity</th>
+                                                    <th class="product_total">Total</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach(var item in Model){
+                                                <tr>
+                                                    <td class="product_remove"><a href="/Cart/Delete/@item.ProductRecord.Id"><i class="fa fa-trash-o"></i></a></td>
+                                                    <td class="product_thumb"><a href="#"><img src="~/Upload/Products/@item.ProductRecord.Photo" alt=""></a></td>
+                                                     <td class="product_name"><a href="#">@item.ProductRecord.Name</a></td>
+                                                     <td class="product-price">@string.Format("{0:#,#.}", item.ProductRecord.Price)đ</td>
+                                                     <td class="product-price">@item.ProductRecord.Discount</td>
+
+                                                    <td class="product_quantity"><input min="0" max="100" value="@item.Quantity" type="number" name="product_@item.ProductRecord.Id"></td>
+                                                            <td class="product_total">@string.Format("{0:#,#.}", (item.ProductRecord.Price * (1 - item.ProductRecord.Discount / 100) * item.Quantity))đ</td>
+
+                                                </tr>
+                                                }
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="cart_submit">
+                                        <a href="/Home/Index">Buy More</a>
+                                    </div>
+                                    <div class="cart_submit">
+                                        <button type="submit">update cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--coupon code area start-->
+                        <div class="coupon_area">
+                                <div class="row" style="justify-content:center ">
+                                <div class="col-lg-8 col-md-6">
+                                    <div class="coupon_code">
+                                        <h3>Cart Totals</h3>
+                                        <div class="coupon_inner">
+                                            <div class="cart_subtotal">
+                                                <p>Subtotal</p>
+                                                    <p class="cart_amount">@string.Format("{0:#,#.}", Cart.CartTotal(Context.Session))đ</p>
+                                            </div>
+                                           @*  <div class="cart_subtotal ">
+                                                <p>Shipping</p>
+                                                <p class="cart_amount"><span>Flat Rate:</span> £255.00</p>
+                                            </div> *@
+                                            @* <a href="#">Calculate shipping</a>
+
+                                            <div class="cart_subtotal">
+                                                <p>Total</p>
+                                                <p class="cart_amount">£215.00</p>
+                                            </div> *@
+                                            <div class="checkout_btn">
+                                                <a href="/Cart/Checkout">Proceed to Checkout</a>
+                                                <p style="font-size : 10px">Sign in to checkout</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--coupon code area end-->
+                    </form>
+                </div>
+                    <!--shopping cart area end -->
+                }
+                else{
+                    <h1>No more items in cart</h1>
+                    
+                    }
+
+            </div>
+            <!--pos page inner end-->
+        </div>
+    </div>
+    <!--pos page end-->
+    <!--footer area start-->
+    <div class="footer_area">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer_widget">
+                            <h3>About us</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div class="footer_widget_contect">
+                                <p><i class="fa fa-map-marker" aria-hidden="true"></i>  19 Interpro Road Madison, AL 35758, USA</p>
+
+                                <p><i class="fa fa-mobile" aria-hidden="true"></i> (012) 234 432 3568</p>
+                                <a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i> Contact@plazathemes.com </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer_widget">
+                            <h3>My Account</h3>
+                            <ul>
+                                <li><a href="#">Your Account</a></li>
+                                <li><a href="#">My orders</a></li>
+                                <li><a href="#">My credit slips</a></li>
+                                <li><a href="#">My addresses</a></li>
+                                <li><a href="#">Login</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer_widget">
+                            <h3>Informations</h3>
+                            <ul>
+                                <li><a href="#">Specials</a></li>
+                                <li><a href="#">Our store(s)!</a></li>
+                                <li><a href="#">My credit slips</a></li>
+                                <li><a href="#">Terms and conditions</a></li>
+                                <li><a href="#">About us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer_widget">
+                            <h3>extras</h3>
+                            <ul>
+                                <li><a href="#"> Brands</a></li>
+                                <li><a href="#"> Gift Vouchers </a></li>
+                                <li><a href="#"> Affiliates </a></li>
+                                <li><a href="#"> Specials </a></li>
+                                <li><a href="#"> Privacy policy </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="copyright_area">
+                            <ul>
+                                <li><a href="#"> about us </a></li>
+                                <li><a href="#">  Customer Service  </a></li>
+                                <li><a href="#">  Privacy Policy  </a></li>
+                            </ul>
+                            <p>Copyright &copy; 2018 <a href="#">Pos Coron</a>. All rights reserved. </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer_social text-right">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                <li><a class="pinterest" href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+
+                                <li><a href="#"><i class="fa fa-wifi" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--footer area end-->
+    <!-- all js here -->
+    <script src="~/Frontend/frontend/assets\js\vendor\jquery-1.12.0.min.js"></script>
+    <script src="~/Frontend/frontend/assets\js\popper.js"></script>
+    <script src="~/Frontend/frontend/assets\js\bootstrap.min.js"></script>
+    <script src="~/Frontend/frontend/assets\js\ajax-mail.js"></script>
+    <script src="~/Frontend/frontend/assets\js\plugins.js"></script>
+    <script src="~/Frontend/frontend/assets\js\main.js"></script>
+</body>
+
+</html>

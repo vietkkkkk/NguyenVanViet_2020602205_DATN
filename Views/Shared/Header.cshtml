@@ -1,0 +1,370 @@
+﻿@using webbanhang.Models
+@functions{
+
+    public string GetPlace(bool check)
+    {
+        if (check == true)
+            return "Edit";
+        else return "Login";
+    }
+
+}
+
+<div class="header_area">
+    <!--header top-->
+    <div class="header_top">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-6">
+              @*   <div class="switcher">
+                    <ul>
+                        <li class="languages">
+                            <a href="#"><img src="assets\img\logo\fontlogo.jpg" alt=""> English <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown_languages">
+                                <li><a href="#"><img src="assets\img\logo\fontlogo.jpg" alt=""> English</a></li>
+                                <li><a href="#"><img src="assets\img\logo\fontlogo2.jpg" alt=""> French </a></li>
+                            </ul>
+                        </li>
+
+                        <li class="currency">
+                            <a href="#"> Currency : $ <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown_currency">
+                                <li><a href="#"> Dollar (USD)</a></li>
+                                <li><a href="#"> Euro (EUR)  </a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div> *@
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="header_links">
+                    @if (!String.IsNullOrEmpty(Context.Session.GetString("customer_user_id")))
+                    {
+                        <ul>
+                            <li><a href="/Frontend/frontend/contact.html" title="Contact">Contact</a></li>                     
+                        <li><a href="/Cart/Read" title="My cart">My cart</a></li>
+                        <li><a href="/Home/Index" title="Login">Account : @Context.Session.GetString("customer_user_name")</a></li>
+                        <li><a href="/Account/EditProfile" title="Edit">Edit</a></li>
+                        <li><a href="/Account/Logout" title="Logout">Logout</a></li>
+
+                        </ul>
+                    }
+                    else
+                    {
+                        <ul>
+                            <li><a href="/Account/Login" title="Login">Login</a></li>
+                            <li><a href="/Account/Register" title="Login">Register</a></li>
+                        </ul>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--header top end-->
+    <!--header middel-->
+    <div class="header_middel">
+        <div class="row align-items-center">
+            <!--logo start-->
+            <div class="col-lg-3 col-md-3">
+                <div class="logo">
+                    <a href="index.html"><img src="assets\img\logo\logo.jpg.png" alt=""></a>
+                </div>
+            </div>
+            <!--logo end-->
+            <div class="col-lg-9 col-md-9">
+                <div class="header_right_info">
+                    <div class="wrap-search center-section" style="width : 400px">
+                        <div class="wrap-search-form">
+                            <input type="text" name="search" id="key" onkeyup="search_ajax();" onfocusout="function(e){e.target.value=''}" value="" placeholder="Search here...">
+                            <button form="form-search-top" onclick="search();" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        </div>
+                        <div class="smart-search abc">
+                            <ul class="thach">
+                                <li class="search-item"><img src="~/Upload/Products/133347663373297900_digital_12.jpg" /><a href="#">product 1</a></li>
+                                <li class="search-item"><img src="~/Upload/Products/133347663373297900_digital_12.jpg" /><a href="#">product 1</a></li>
+                                <li class="search-item"><img src="~/Upload/Products/133347663373297900_digital_12.jpg" />
+                                <a href="#">product 1</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <style>
+                        .search-item:hover{
+                            background-color:aqua;
+
+                        }
+                        .wrap-search-form {
+                           display:flex;
+                           
+                        }
+                        .wrap-search {
+                            position: relative;
+                           
+                        }
+
+                        .smart-search {
+                            position: absolute;
+                            z-index: 1000;
+                            background: white;
+                           
+                            left: 0;
+                            right: 0;
+                            display: none;
+                            height: 250px;
+                            overflow: scroll;
+                        }
+
+                            .smart-search img {
+                                width: 70px;
+                            }
+
+                            .smart-search ul {
+                                padding: 0px;
+                                margin: 0px;
+                                list-style: none;
+                                text-align: left;
+                            }
+
+                            .smart-search li {
+                                border-top: 1px solid #dddddd;
+                            }
+                    </style>
+                    <script>
+                        function search() {
+                            var key = document.getElementById("key").value;
+                            location.href = "/Products/SearchName?key=" + key;
+                        }
+                       
+                        function search_ajax() {
+                            var key = document.getElementById("key").value;
+                            
+                            if (key != "") {
+                                $(".smart-search").attr("style", "display:block;");
+                              
+                                $.get("/Products/SearchAjax?key=" + key, function (result) {
+                                 
+                                    $(".smart-search ul").empty();
+                                 
+                                    $(".smart-search ul").append(result);
+                                });
+                            }
+                            else
+                                $(".smart-search").attr("style", "display:none;");
+                        }
+                    </script>
+                    <div class="shopping_cart">
+                        <a href="/Account/Orders"><i class="fa fa-shopping-cart"></i> My Cart <i class="fa fa-angle-down"></i></a>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--header middel end-->
+    <div class="header_bottom">
+        <div class="row">
+            <div class="col-12">
+                <div class="main_menu_inner">
+                    <div class="main_menu d-none d-lg-block">
+                        <nav>
+                            <ul>
+                                <li class="active">
+                                    <a href="/Home/Index">Home</a>
+                                   
+                                </li>
+                                <li>
+                                    <a href="/Products/Categories">Shop</a>
+                                      
+                                </li>
+                               
+                                
+                                <li>
+                                    <a href="/Cart/Read">Cart</a>
+                                 
+                                </li>
+                                <li>
+                                    <a href="/News/News">News</a>
+                             
+                                </li>
+
+                                <li>
+                                    <a href="/Contact/Index">Contact</a>
+                               
+                                </li>
+                              
+
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="mobile-menu d-lg-none">
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="index.html">Home</a>
+                                    <div>
+                                        <div>
+                                            <ul>
+                                                <li><a href="index.html">Home 1</a></li>
+                                                <li><a href="index-2.html">Home 2</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">Menu4</a>
+                                    <div>
+                                        <div>
+                                            <ul>
+                                                <li><a href="shop-list.html">shop list</a></li>
+                                                <li><a href="shop-fullwidth.html">shop Full Width Grid</a></li>
+                                                <li><a href="shop-fullwidth-list.html">shop Full Width list</a></li>
+                                                <li><a href="shop-sidebar.html">shop Right Sidebar</a></li>
+                                                <li><a href="shop-sidebar-list.html">shop list Right Sidebar</a></li>
+                                                <li><a href="single-product.html">Product Details</a></li>
+                                                <li><a href="single-product-sidebar.html">Product sidebar</a></li>
+                                                <li><a href="single-product-video.html">Product Details video</a></li>
+                                                <li><a href="single-product-gallery.html">Product Details Gallery</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">Menu5</a>
+                                    <div>
+                                        <div>
+                                            <div>
+                                                <h3><a href="#">Accessories</a></h3>
+                                                <ul>
+                                                    <li><a href="#">Cocktai</a></li>
+                                                    <li><a href="#">day</a></li>
+                                                    <li><a href="#">Evening</a></li>
+                                                    <li><a href="#">Sundresses</a></li>
+                                                    <li><a href="#">Belts</a></li>
+                                                    <li><a href="#">Sweets</a></li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <h3><a href="#">HandBags</a></h3>
+                                                <ul>
+                                                    <li><a href="#">Accessories</a></li>
+                                                    <li><a href="#">Hats and Gloves</a></li>
+                                                    <li><a href="#">Lifestyle</a></li>
+                                                    <li><a href="#">Bras</a></li>
+                                                    <li><a href="#">Scarves</a></li>
+                                                    <li><a href="#">Small Leathers</a></li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <h3><a href="#">Tops</a></h3>
+                                                <ul>
+                                                    <li><a href="#">Evening</a></li>
+                                                    <li><a href="#">Long Sleeved</a></li>
+                                                    <li><a href="#">Shrot Sleeved</a></li>
+                                                    <li><a href="#">Tanks and Camis</a></li>
+                                                    <li><a href="#">Sleeveless</a></li>
+                                                    <li><a href="#">Sleeveless</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div>
+                                                <a href="#"><img src="assets\img\banner\banner1.jpg" alt=""></a>
+                                            </div>
+                                            <div>
+                                                <a href="#"><img src="assets\img\banner\banner2.jpg" alt=""></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">Menu6</a>
+                                    <div>
+                                        <div>
+                                            <div>
+                                                <h3><a href="#">Rings</a></h3>
+                                                <ul>
+                                                    <li><a href="#">Platinum Rings</a></li>
+                                                    <li><a href="#">Gold Ring</a></li>
+                                                    <li><a href="#">Silver Ring</a></li>
+                                                    <li><a href="#">Tungsten Ring</a></li>
+                                                    <li><a href="#">Sweets</a></li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <h3><a href="#">Bands</a></h3>
+                                                <ul>
+                                                    <li><a href="#">Platinum Bands</a></li>
+                                                    <li><a href="#">Gold Bands</a></li>
+                                                    <li><a href="#">Silver Bands</a></li>
+                                                    <li><a href="#">Silver Bands</a></li>
+                                                    <li><a href="#">Sweets</a></li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <a href="#"><img src="assets\img\banner\banner3.jpg" alt=""></a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">Menu7</a>
+                                    <div>
+                                        <div>
+                                            <div>
+                                                <h3><a href="#">Column1</a></h3>
+                                                <ul>
+                                                    <li><a href="portfolio.html">Portfolio</a></li>
+                                                    <li><a href="portfolio-details.html">single portfolio </a></li>
+                                                    <li><a href="about.html">About Us </a></li>
+                                                    <li><a href="about-2.html">About Us 2</a></li>
+                                                    <li><a href="services.html">Service </a></li>
+                                                    <li><a href="my-account.html">my account </a></li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <h3><a href="#">Column2</a></h3>
+                                                <ul>
+                                                    <li><a href="blog.html">Blog </a></li>
+                                                    <li><a href="blog-details.html">Blog  Details </a></li>
+                                                    <li><a href="blog-fullwidth.html">Blog FullWidth</a></li>
+                                                    <li><a href="blog-sidebar.html">Blog  Sidebar</a></li>
+                                                    <li><a href="faq.html">Frequently Questions</a></li>
+                                                    <li><a href="404.html">404</a></li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <h3><a href="#">Column3</a></h3>
+                                                <ul>
+                                                    <li><a href="contact.html">Contact</a></li>
+                                                    <li><a href="cart.html">cart</a></li>
+                                                    <li><a href="checkout.html">Checkout  </a></li>
+                                                    <li><a href="wishlist.html">Wishlist</a></li>
+                                                    <li><a href="login.html">Login</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a href="#">Menu7</a>
+                                    <div>
+                                        <div>
+                                            <ul>
+                                                <li><a href="blog-details.html">blog details</a></li>
+                                                <li><a href="blog-fullwidth.html">blog fullwidth</a></li>
+                                                <li><a href="blog-sidebar.html">blog sidebar</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a href="#">Menu8</a></li>
+
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

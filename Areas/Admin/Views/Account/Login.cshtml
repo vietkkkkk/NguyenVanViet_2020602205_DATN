@@ -1,0 +1,29 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <title>Log in</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="/Admin/css/login.css">
+</head>
+<body>
+    <div class="login__container">
+        <div class="login__inner">
+            <div class="login__img">
+                <img src="/Admin/images/about2.jpg" alt="image">
+            </div>
+
+            <form class="login__form" method="POST" action="@ViewBag.action">
+                <h3 class="login__title">
+                    Đăng nhập quyền quản trị
+                </h3>
+                <input class="login__input login__username" type="text" name="Email" id="email" placeholder="Username" required>
+                <input class="login__input login__password" type="password" name="Password" id="password" placeholder="Password" required>
+
+                <input class="login__input login__submit-btn" type="submit" value="Đăng nhập">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+﻿@{
+    Layout = "~/Views/Shared/InnerLayout.cshtml";
+}
+@using webbanhang.Models
+@using X.PagedList.Mvc
+@model X.PagedList.IPagedList<ItemProduct>
+
+<div class="col-lg-9 col-md-12">
+    <!--banner slider start-->
+    <div class="banner_slider mb-35">
+        <img src="~/Frontend/frontend/assets\img\banner\bannner10.jpg" alt="">
+    </div>
+    <!--banner slider start-->
+    <!--shop toolbar start-->
+    <div class="shop_toolbar mb-35">
+
+        <h3 class="shop-title">Search key : @ViewBag.key</h3>
+       
+    </div>
+    <!--shop toolbar end-->
+    <!--shop tab product-->
+    <div class="shop_tab_product">
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="large" role="tabpanel">
+                <div class="row">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-lg-4 col-md-6">
+                            <div class="single_product">
+                                <div class="product_thumb">
+                                    <a href="#"><img src="~/Upload/Products/@item.Photo" alt=""></a>
+                                    <div class="img_icone">
+                                        <img src="~/Upload/Products/@item.Photo" alt="">
+                                    </div>
+                                    <div class="product_action">
+                                        <a href="Cart/Add"> <i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                    </div>
+                                </div>
+                                <div class="product_content">
+                                    <span class="product_price">@string.Format("{0:#,#.}", item.Price)đ</span>
+                                    <h3 class="product_title"><a href="single-product.html">@item.Name</a></h3>
+                                </div>
+                                <div class="product_info">
+                                    <ul>
+                                        <li><a href="#" title=" Add to Wishlist ">Add to Wishlist</a></li>
+                                        <li><a href="/Products/Detail/@item.Id" data-toggle="modal" data-target="#modal_box" title="Quick view">View Detail</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--shop tab product end-->
+    <!--pagination style start-->
+    <div class="pagination_style">
+
+        <div class="page_number">
+            <span>Pages: </span>
+            <ul>
+                @for (int i = 1; i <= Model.PageCount; i++)
+                {
+                    string str_current = (i == Model.PageNumber) ? "current" : "";
+                    <li><span class="page-number-item @str_current"><a href="/Products/Categories/@ViewBag._CategoryId?page=@i">@i</a></span></li>
+                }
+            </ul>
+        </div>
+    </div>
+    <!--pagination style end-->
+</div>

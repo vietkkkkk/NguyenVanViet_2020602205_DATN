@@ -1,0 +1,114 @@
+﻿@{
+    Layout = "~/Views/Shared/InnerLayout.cshtml";
+}
+@using webbanhang.Models
+@using X.PagedList.Mvc
+@model X.PagedList.IPagedList<ItemProduct>
+@functions {
+    //get categories name
+    public MyDBContext db = new MyDBContext();
+    string GetCategoryName(int _CategoryId)
+    {
+        ItemCategory rc = db.Categories.Where(item => item.Id == _CategoryId).FirstOrDefault();
+        return rc != null ? rc.Name : "Categories";
+    }
+
+}
+<div class="col-lg-9 col-md-12">
+    <!--banner slider start-->
+    <div class="banner_slider mb-35">
+        <img src="~/Frontend/frontend/assets\img\banner\bannner10.jpg" alt="">
+    </div>
+    <!--banner slider start-->
+    <!--shop toolbar start-->
+    <div class="shop_toolbar mb-35">
+
+        <h3 class="shop-title">@GetCategoryName(ViewBag._CategoryId)</h3>
+        <div class="select_option">
+            <form action="#">
+                <label>Sort By</label>
+                <select id="orderby" class="use-chosen" onchange="location.href='/Products/Categories/@ViewBag._CategoryId?orderby='+document.getElementById('orderby').value;">
+                    <option>Default Sorting</option>
+                    <option @if (ViewBag.orderby == "name-asc")
+                    {
+                        <text>selected</text>
+                    } value="name-asc">Sort by name a-z</option>
+                    <option @if (ViewBag.orderby == "name-desc")
+                    {
+                        <text>selected</text>
+                    } value="name-desc">Sort by name z-a</option>
+                    <option @if (ViewBag.orderby == "price-asc")
+                    {
+                        <text>selected</text>
+                    }value="price-asc">Sort by price: low to high</option>
+                    <option @if (ViewBag.orderby == "price-desc")
+                    {
+                        <text>selected</text>
+                    } value="price-desc">Sort by price: high to low</option>
+                </select>
+            </form>
+        </div>
+    </div>
+    <!--shop toolbar end-->
+    <!--shop tab product-->
+    <div class="shop_tab_product">
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="large" role="tabpanel">
+                <div class="row">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-lg-4 col-md-6">
+                            <div class="single_product">
+                                <div class="product_thumb">
+                                    <a href="#"><img src="~/Upload/Products/@item.Photo" alt=""></a>
+                                    <div class="img_icone">
+                                        <img src="~/Upload/Products/@item.Photo" alt="">
+                                    </div>
+                                    <div class="product_action">
+                                        <a href="/Cart/Add/@item.Id"> <i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                    </div>
+                                </div>
+                                <div class="product_content">
+                                    <span class="product_price">@string.Format("{0:#,#.}", item.Price)đ</span>
+                                    <h3 class="product_title"><a href="single-product.html">@item.Name</a></h3>
+                                </div>
+                                <div class="wrap-price" style="margin-left:90px">
+                                    <div class="product-price" >
+                                        <a href="/Products/Rate/@item.Id?star=1" style="margin-right: 3px;"><i class="fa fa-star" style="color:#efce4a;"></i></a>
+                                        <a href="/Products/Rate/@item.Id?star=2" style="margin-right: 3px;"><i class="fa fa-star" style="color:#efce4a;"></i></a>
+                                        <a href="/Products/Rate/@item.Id?star=3" style="margin-right: 3px;"><i class="fa fa-star" style="color:#efce4a;"></i></a>
+                                        <a href="/Products/Rate/@item.Id?star=4" style="margin-right: 3px;"><i class="fa fa-star" style="color:#efce4a;"></i></a>
+                                        <a href="/Products/Rate/@item.Id?star=5" style="margin-right: 3px;"><i class="fa fa-star" style="color:#efce4a;"></i></a>
+                                    </div>
+                                </div>
+                                <div class="product_info">
+                                    <ul>
+                                        <li><a href="#" title=" Add to Wishlist ">Add to Wishlist</a></li>
+                                        <li><a href="/Products/Detail/@item.Id" title="Quick view">View Detail</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--shop tab product end-->
+    <!--pagination style start-->
+    <div class="pagination_style">
+
+        <div class="page_number">
+            <span>Pages: </span>
+            <ul>
+                @for (int i = 1; i <= Model.PageCount; i++)
+                {
+                    string str_current = (i == Model.PageNumber) ? "current" : "";
+                    <li><span class="page-number-item @str_current"><a href="/Products/Categories/@ViewBag._CategoryId?page=@i">@i</a></span></li>
+                }
+            </ul>
+        </div>
+    </div>
+    <!--pagination style end-->
+</div>

@@ -1,0 +1,55 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\Frontend\Admin\**" />
+    <Content Remove="wwwroot\Frontend\Admin\**" />
+    <EmbeddedResource Remove="wwwroot\Frontend\Admin\**" />
+    <None Remove="wwwroot\Frontend\Admin\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="wwwroot\Upload\Adv\" />
+    <Folder Include="wwwroot\Upload\News\" />
+    <Folder Include="wwwroot\Upload\Slides\" />
+    <Folder Include="wwwroot\Upload\Products\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Areas\Admin\Views\Adv\CreateUpdate.cshtml" />
+    <None Include="Areas\Admin\Views\Adv\Read.cshtml" />
+    <None Include="Areas\Admin\Views\News\CreateUpdate.cshtml" />
+    <None Include="Areas\Admin\Views\News\Read.cshtml" />
+    <None Include="Areas\Admin\Views\Slides\CreateUpdate.cshtml" />
+    <None Include="Areas\Admin\Views\Slides\Read.cshtml" />
+    <None Include="Areas\Admin\Views\Tags\CreateUpdate.cshtml" />
+    <None Include="Areas\Admin\Views\Tags\Read.cshtml" />
+    <None Include="wwwroot\Admin\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\Admin\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\Admin\js\adminlte.min.js" />
+    <None Include="wwwroot\Admin\js\bootstrap.min.js" />
+    <None Include="wwwroot\Admin\js\jquery-ui.min.js" />
+    <None Include="wwwroot\Admin\js\jquery.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter" Version="8.0.3" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+    <PackageReference Include="X.PagedList" Version="9.1.2" />
+    <PackageReference Include="X.PagedList.Mvc.Core" Version="9.1.2" />
+  </ItemGroup>
+
+</Project>

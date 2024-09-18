@@ -1,0 +1,290 @@
+﻿
+@using webbanhang.Models
+@functions {
+    public MyDBContext db = new MyDBContext();
+    public ItemCustomer GetCustomers(int _CustomerId)
+    {
+        //lay mot ban ghi
+        ItemCustomer record = db.Customers.Where(item => item.Id == _CustomerId).FirstOrDefault();
+        return record != null ? record : new ItemCustomer();
+    }
+}
+
+@* <div class="col-md-12" style="margin-top:20px;">
+    <div class="panel panel-primary">
+        <div class="panel-heading">List orders</div>
+        <div class="panel-body">
+            <table class="table table-bordered table-hover">
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+                    <th>Created</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                    <th style="width:150px;"></th>
+                </tr>
+                @foreach (var item in Model)
+                {
+                    ItemCustomer recordCustomer = GetCustomers(item.CustomerId);
+                    <tr>
+                        <td>@recordCustomer.Name</td>
+                        <td>@recordCustomer.Address</td>
+                        <td>@recordCustomer.Phone</td>
+                        <td>@item.Create.ToString("ddMMyyyy")</td>
+                        <td>@string.Format("{0:#,#.}", item.Price)</td>
+                        <td>
+                            @if (item.Status == 2)
+                            {
+                                <text><label class="label label-warning">Đã hủy đơn hàng</label></text>
+                            }
+                            @if (item.Status == 1)
+                            {
+                                <text><label class="label label-danger">Đã giao hàng</label></text>
+                            }
+                            @if (item.Status == 0)
+                            {
+                                <text><label class="label label-primary">Chưa giao hàng</label></text>
+                            }
+                        </td>
+                        <td style="text-align:center;">
+                            <a href="/Account/OrderDetail/@item.Id">Chi tiết</a>
+                            &nbsp;&nbsp;
+                            @if (item.Status == 0)
+                            {
+                                <text><a href="/Account/CancelOrder/@item.Id">Hủy đơn</a></text>
+                            }
+                        </td>
+                    </tr>
+                }
+            </table>
+            <style type="text/css">
+                .pagination {
+                    padding: 0px;
+                    margin: 0px;
+                }
+            </style>
+        </div>
+    </div>
+</div> *@
+
+
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Coron-cart</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="~/Frontend/frontend/assets\img\favicon.png">
+
+    <!-- all css here -->
+    <link rel="stylesheet" href="~/Frontend/frontend/assets\css\bootstrap.min.css">
+    <link rel="stylesheet" href="~/Frontend/frontend/assets\css\plugin.css">
+    <link rel="stylesheet" href="~/Frontend/frontend/assets\css\bundle.css">
+    <link rel="stylesheet" href="~/Frontend/frontend/assets\css\style.css">
+    <link rel="stylesheet" href="~/Frontend/frontend/assets\css\responsive.css">
+    <script src="~/Frontend/frontend/assets\js\vendor\modernizr-2.8.3.min.js"></script>
+</head>
+
+
+
+<body>
+    <!-- Add your site or application content here -->
+    <!--pos page start-->
+    <div class="pos_page">
+        <div class="container">
+            <!--pos page inner-->
+            <div class="pos_page_inner">
+                <!--header area -->
+                @Html.Partial("~/Views/Shared/Header.cshtml")
+                <!--header end -->
+                <!--breadcrumbs area start-->
+                <div class="breadcrumbs_area">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="breadcrumb_content">
+                                <ul>
+                                    <li><a href="/Home/Index">home</a></li>
+                                    <li><i class="fa fa-angle-right"></i></li>
+                                    <li>Shopping Cart</li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--breadcrumbs area end-->
+               
+                    <!--shopping cart area start -->
+                    <div class="shopping_cart_area">
+                        <form method="post" id="frm" action="/Cart/Update">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="table_desc">
+                                        <div class="cart_page table-responsive">
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th class="product_remove">Name</th>
+                                                        <th class="product_thumb">Address</th>
+                                                        <th class="product_name">Phone</th>
+                                                        <th class="product-price">Day Created</th>
+                                                        <th class="product-price">Price</th>
+                                                        <th class="product_quantity">Status</th>
+                                                        <th class="product_total">Detail</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                @foreach (var item in Model)
+                                                {
+                                                   
+                                                    ItemCustomer recordCustomer = GetCustomers(item.CustomerId);
+                                                    <tr>
+                                                        <td>@recordCustomer.Name</td>
+                                                        <td>@recordCustomer.Address</td>
+                                                        <td>@recordCustomer.Phone</td>
+                                                        <td>@item.Create.ToString("ddMMyyyy")</td>
+                                                        <td>@string.Format("{0:#,#.}", item.Price)</td>
+                                                        <td>
+                                                            @if (item.Status == 2)
+                                                            {
+                                                                <text><label class="label label-warning" style="color:red">Đã hủy đơn hàng</label></text>
+                                                            }
+                                                            @if (item.Status == 1)
+                                                            {
+                                                                <text><label class="label label-danger" style="color:red">Đã giao hàng</label></text>
+                                                            }
+                                                            @if (item.Status == 0)
+                                                            {
+                                                                <text><label class="label label-primary" style="color:red">Chưa giao hàng</label></text>
+                                                            }
+                                                        </td>
+                                                        <td style="text-align:center; color:red">
+                                                            <a href="/Account/OrderDetail/@item.Id">Details</a>
+                                                            &nbsp;&nbsp;
+                                                            @if (item.Status == 0)
+                                                            {
+                                                                <text><a href="/Account/CancelOrder/@item.Id">Cancel</a></text>
+                                                            }
+                                                        </td>
+                                                    </tr>
+                                                }
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="cart_submit">
+                                            <a href="/Cart/Read" cla>Back to cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                         
+                        </form>
+                    </div>
+              
+
+                
+            </div>
+            <!--pos page inner end-->
+        </div>
+    </div>
+    <!--pos page end-->
+    <!--footer area start-->
+    <div class="footer_area">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer_widget">
+                            <h3>About us</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div class="footer_widget_contect">
+                                <p><i class="fa fa-map-marker" aria-hidden="true"></i>  19 Interpro Road Madison, AL 35758, USA</p>
+
+                                <p><i class="fa fa-mobile" aria-hidden="true"></i> (012) 234 432 3568</p>
+                                <a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i> Contact@plazathemes.com </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer_widget">
+                            <h3>My Account</h3>
+                            <ul>
+                                <li><a href="#">Your Account</a></li>
+                                <li><a href="#">My orders</a></li>
+                                <li><a href="#">My credit slips</a></li>
+                                <li><a href="#">My addresses</a></li>
+                                <li><a href="#">Login</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer_widget">
+                            <h3>Informations</h3>
+                            <ul>
+                                <li><a href="#">Specials</a></li>
+                                <li><a href="#">Our store(s)!</a></li>
+                                <li><a href="#">My credit slips</a></li>
+                                <li><a href="#">Terms and conditions</a></li>
+                                <li><a href="#">About us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer_widget">
+                            <h3>extras</h3>
+                            <ul>
+                                <li><a href="#"> Brands</a></li>
+                                <li><a href="#"> Gift Vouchers </a></li>
+                                <li><a href="#"> Affiliates </a></li>
+                                <li><a href="#"> Specials </a></li>
+                                <li><a href="#"> Privacy policy </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="copyright_area">
+                            <ul>
+                                <li><a href="#"> about us </a></li>
+                                <li><a href="#">  Customer Service  </a></li>
+                                <li><a href="#">  Privacy Policy  </a></li>
+                            </ul>
+                            <p>Copyright &copy; 2018 <a href="#">Pos Coron</a>. All rights reserved. </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer_social text-right">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                <li><a class="pinterest" href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+
+                                <li><a href="#"><i class="fa fa-wifi" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--footer area end-->
+    <!-- all js here -->
+    <script src="~/Frontend/frontend/assets\js\vendor\jquery-1.12.0.min.js"></script>
+    <script src="~/Frontend/frontend/assets\js\popper.js"></script>
+    <script src="~/Frontend/frontend/assets\js\bootstrap.min.js"></script>
+    <script src="~/Frontend/frontend/assets\js\ajax-mail.js"></script>
+    <script src="~/Frontend/frontend/assets\js\plugins.js"></script>
+    <script src="~/Frontend/frontend/assets\js\main.js"></script>
+</body>
+
+</html>

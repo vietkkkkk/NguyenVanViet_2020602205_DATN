@@ -1,0 +1,388 @@
+﻿@using webbanhang.Models
+@functions {
+    public MyDBContext db = new MyDBContext();
+    string GetCategoryName(int _ProductId)
+    {
+        var record = (from category in db.Categories
+                      join category_product in db.CategoriesProducts on category.Id
+                  equals category_product.CategoryId
+                      join product in db.Products on category_product.ProductId
+                  equals product.Id
+                      where product.Id == _ProductId
+                      select category).FirstOrDefault();
+        return record != null ? record.Name : "";
+    }
+    public string GetStar(int _ProductId, int _Star)
+    {
+        List<ItemRating> list_record = db.Rating.Where(item => item.ProductId == _ProductId && item.Star == _Star).ToList();
+        return list_record.Count.ToString();
+    }
+}
+
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Coron-single product</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="~/Frontend/frontend/assets\img\favicon.png">
+
+    <!-- all css here -->
+    <link rel="stylesheet" href="~/Frontend/frontend/assets\css\bootstrap.min.css">
+    <link rel="stylesheet" href="~/Frontend/frontend/assets\css\plugin.css">
+    <link rel="stylesheet" href="~/Frontend/frontend/assets\css\bundle.css">
+    <link rel="stylesheet" href="~/Frontend/frontend/assets\css\style.css">
+    <link rel="stylesheet" href="~/Frontend/frontend/assets\css\responsive.css">
+    <script src="~/Frontend/frontend/assets\js\vendor\modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+    <!-- Add your site or application content here -->
+    <!--pos page start-->
+    <div class="pos_page">
+        <div class="container">
+            <!--pos page inner-->
+            <div class="pos_page_inner">
+                <!--header area -->
+                @Html.Partial("~/Views/Shared/Header.cshtml")
+                <!--header end -->
+                <!--breadcrumbs area start-->
+                <div class="breadcrumbs_area">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="breadcrumb_content">
+                                <ul>
+                                    <li><a href="index.html">home</a></li>
+                                    <li><i class="fa fa-angle-right"></i></li>
+                                    <li>single product</li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--breadcrumbs area end-->
+                <!--product wrapper start-->
+                <div class="product_details">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-6">
+                            <div class="product_tab fix">
+                                <div class="product_tab_button">
+                                    <ul class="nav" role="tablist">
+                                        <li>
+                                            <a class="active" data-toggle="tab" href="#p_tab1" role="tab" aria-controls="p_tab1" aria-selected="false"><img src="~/Frontend/frontend/assets\img\cart\cart.jpg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a data-toggle="tab" href="#p_tab2" role="tab" aria-controls="p_tab2" aria-selected="false"><img src="~/Frontend/frontend/assets\img\cart\cart2.jpg" alt=""></a>
+                                        </li>
+                                        <li>
+                                            <a data-toggle="tab" href="#p_tab3" role="tab" aria-controls="p_tab3" aria-selected="false"><img src="~/Frontend/frontend/assets\img\cart\cart4.jpg" alt=""></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="tab-content produc_tab_c">
+                                    <div class="tab-pane fade show active" id="p_tab1" role="tabpanel">
+                                        <div class="modal_img">
+                                            <a href="#"><img src="~/Upload/Products/@Model.Photo" alt=""></a>
+                                            <div class="img_icone">
+                                                <img src="~/Frontend/frontend/assets\img\cart\span-new.png" alt="">
+                                            </div>
+                                            <div class="view_img">
+                                                <a class="large_view" href="~/Upload/Products/@Model.Photo"><i class="fa fa-search-plus"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="p_tab2" role="tabpanel">
+                                        <div class="modal_img">
+                                            <a href="#"><img src="~/Frontend/frontend/assets\img\product\product14.jpg" alt=""></a>
+                                            <div class="img_icone">
+                                                <img src="~/Frontend/frontend/assets\img\cart\span-new.png" alt="">
+                                            </div>
+                                            <div class="view_img">
+                                                <a class="large_view" href="~/Frontend/frontend/assets\img\product\product14.jpg"><i class="fa fa-search-plus"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="p_tab3" role="tabpanel">
+                                        <div class="modal_img">
+                                            <a href="#"><img src="~/Frontend/frontend/assets\img\product\product15.jpg" alt=""></a>
+                                            <div class="img_icone">
+                                                <img src="~/Frontend/frontend/assets\img\cart\span-new.png" alt="">
+                                            </div>
+                                            <div class="view_img">
+                                                <a class="large_view" href="~/Frontend/frontend/assets\img\product\product15.jpg"> <i class="fa fa-search-plus"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-6">
+                            <div class="product_d_right">
+                                <h1>@Model.Name</h1>
+                                <div class="product_ratting mb-10">
+                                    <div class="product-rating">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <a href="/Products/Rate/@Model.Id?star=1" class="count-review">(@GetStar(Model.Id, 1) review)</a>
+                                    </div>
+                                    <div style="clear: both;"></div>
+                                    <div class="product-rating">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <a href="" class="count-review">(@GetStar(Model.Id, 2) review)</a>
+                                    </div>
+                                    <div style="clear: both;"></div>
+                                    <div class="product-rating">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <a href="#" class="count-review">(@GetStar(Model.Id, 3) review)</a>
+                                    </div>
+                                    <div style="clear: both;"></div>
+                                    <div class="product-rating">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <a href="#" class="count-review">(@GetStar(Model.Id, 4) review)</a>
+                                    </div>
+                                    <div style="clear: both;"></div>
+                                    <div class="product-rating">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <a href="#" class="count-review">(@GetStar(Model.Id, 5) review)</a>
+                                    </div>
+                                </div>
+                                <div class="product_desc">
+                                        <p>@Model.Description</p>  
+                                        <h1 style="color : red">Sale @Model.Discount%</h1>
+                                </div>
+
+                                <div class="content_price mb-15">
+                                    <h1 style="color : red">Hot Price</h1>
+                                    <span>@if (Model.Discount > 0)
+                                        {
+                                            @((Model.Price * Model.Discount) / 100)
+                                            <span class="old-price">@string.Format("{0:#,#.}", Model.Price)đ</span>
+                                        }
+                                        else
+                                        {
+                                            <span>@string.Format("{0:#,#.}", Model.Price)đ</span>
+                                        }
+                                    </span>
+                                </div>
+                                <div class="box_quantity mb-20">
+                                    <form action="#">
+                                        <label>quantity</label>
+                                        <input min="0" max="100" value="1" type="number">
+                                    </form>
+                                     <a href="/Cart/Add/@Model.Id"> <i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                    <a href="/Cart/Add/@Model.Id" title="add to wishlist"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                                </div>
+                   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+      
+            </div>
+            <!--pos page inner end-->
+        </div>
+    </div>
+    <!--pos page end-->
+    <!--footer area start-->
+    <div class="footer_area">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer_widget">
+                            <h3>About us</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <div class="footer_widget_contect">
+                                <p><i class="fa fa-map-marker" aria-hidden="true"></i>  19 Interpro Road Madison, AL 35758, USA</p>
+
+                                <p><i class="fa fa-mobile" aria-hidden="true"></i> (012) 234 432 3568</p>
+                                <a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i> Contact@plazathemes.com </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer_widget">
+                            <h3>My Account</h3>
+                            <ul>
+                                <li><a href="#">Your Account</a></li>
+                                <li><a href="#">My orders</a></li>
+                                <li><a href="#">My credit slips</a></li>
+                                <li><a href="#">My addresses</a></li>
+                                <li><a href="#">Login</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer_widget">
+                            <h3>Informations</h3>
+                            <ul>
+                                <li><a href="#">Specials</a></li>
+                                <li><a href="#">Our store(s)!</a></li>
+                                <li><a href="#">My credit slips</a></li>
+                                <li><a href="#">Terms and conditions</a></li>
+                                <li><a href="#">About us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer_widget">
+                            <h3>extras</h3>
+                            <ul>
+                                <li><a href="#"> Brands</a></li>
+                                <li><a href="#"> Gift Vouchers </a></li>
+                                <li><a href="#"> Affiliates </a></li>
+                                <li><a href="#"> Specials </a></li>
+                                <li><a href="#"> Privacy policy </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="copyright_area">
+                            <ul>
+                                <li><a href="#"> about us </a></li>
+                                <li><a href="#">  Customer Service  </a></li>
+                                <li><a href="#">  Privacy Policy  </a></li>
+                            </ul>
+                            <p>Copyright &copy; 2018 <a href="#">Pos Coron</a>. All rights reserved. </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer_social text-right">
+                            <ul>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                <li><a class="pinterest" href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
+
+                                <li><a href="#"><i class="fa fa-wifi" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--footer area end-->
+    <!-- modal area start -->
+    <div class="modal fade" id="modal_box" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal_body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-5 col-md-5 col-sm-12">
+                                <div class="modal_tab">
+                                    <div class="tab-content" id="pills-tabContent">
+                                        <div class="tab-pane fade show active" id="tab1" role="tabpanel">
+                                            <div class="modal_tab_img">
+                                                <a href="#"><img src="~/Frontend/frontend/assets\img\product\product13.jpg" alt=""></a>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="tab2" role="tabpanel">
+                                            <div class="modal_tab_img">
+                                                <a href="#"><img src="~/Frontend/frontend/assets\img\product\product14.jpg" alt=""></a>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="tab3" role="tabpanel">
+                                            <div class="modal_tab_img">
+                                                <a href="#"><img src="~/Frontend/frontend/assets\img\product\product15.jpg" alt=""></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal_tab_button">
+                                        <ul class="nav product_navactive" role="tablist">
+                                            <li>
+                                                <a class="nav-link active" data-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="false"><img src="~/Frontend/frontend/assets\img\cart\cart17.jpg" alt=""></a>
+                                            </li>
+                                            <li>
+                                                <a class="nav-link" data-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false"><img src="~/Frontend/frontend/assets\img\cart\cart18.jpg" alt=""></a>
+                                            </li>
+                                            <li>
+                                                <a class="nav-link button_three" data-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false"><img src="~/Frontend/frontend/assets\img\cart\cart19.jpg" alt=""></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 col-md-7 col-sm-12">
+                                <div class="modal_right">
+                                    <div class="modal_title mb-10">
+                                        <h2>Handbag feugiat</h2>
+                                    </div>
+                                    <div class="modal_price mb-10">
+                                        <span class="new_price">$64.99</span>
+                                        <span class="old_price">$78.99</span>
+                                    </div>
+                                    <div class="modal_content mb-10">
+                                        <p>Short-sleeved blouse with feminine draped sleeve detail.</p>
+                                    </div>
+                                    <div class="modal_size mb-15">
+                                        <h2>size</h2>
+                                        <ul>
+                                            <li><a href="#">s</a></li>
+                                            <li><a href="#">m</a></li>
+                                            <li><a href="#">l</a></li>
+                                            <li><a href="#">xl</a></li>
+                                            <li><a href="#">xxl</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="modal_add_to_cart mb-15">
+                                        <form action="#">
+                                            <input min="0" max="100" step="2" value="1" type="number">
+                                            <button type="submit">add to cart</button>
+                                        </form>
+                                    </div>
+                                    <div class="modal_description mb-15">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+                                    </div>
+                                    <div class="modal_social">
+                                        <h2>Share this product</h2>
+                                        <ul>
+                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal area end -->
+    <!-- all js here -->
+    <script src="~/Frontend/frontend/assets\js\vendor\jquery-1.12.0.min.js"></script>
+    <script src="~/Frontend/frontend/assets\js\popper.js"></script>
+    <script src="~/Frontend/frontend/assets\js\bootstrap.min.js"></script>
+    <script src="~/Frontend/frontend/assets\js\ajax-mail.js"></script>
+    <script src="~/Frontend/frontend/assets\js\plugins.js"></script>
+    <script src="~/Frontend/frontend/assets\js\main.js"></script>
+</body>
+</html>
